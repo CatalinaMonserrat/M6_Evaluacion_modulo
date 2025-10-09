@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'tareas',
 ]
 
-LOGIN_URL = "auth/login"        
+LOGIN_URL = "login"              
 LOGIN_REDIRECT_URL = "tareas_lista"
 LOGOUT_REDIRECT_URL = "login"
 

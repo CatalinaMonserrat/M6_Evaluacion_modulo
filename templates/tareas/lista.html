@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Mis tareas{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h3">Mis tareas</h1>
+    <a class="btn btn-success" href="{% url 'tareas_agregar' %}">+ Nueva tarea</a>
+</div>
+
+{% if tareas %}
+<div class="list-group">
+    {% for t in tareas %}
+    <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+        href="{% url 'tareas_detalle' t.id %}">
+        <div>
+            <strong>{{ t.titulo }}</strong>
+            <div class="small text-muted">{{ t.descripcion|default:"(Sin descripción)" }}</div>
+        </div>
+        <form method="post" action="{% url 'tareas_eliminar' t.id %}">
+            {% csrf_token %}
+            <button class="btn btn-sm btn-outline-danger" onclick="return confirm('¿Eliminar tarea?')">Eliminar</button>
+        </form>
+    </a>
+    {% endfor %}
+</div>
+{% else %}
+<p class="text-muted">Aún no tienes tareas.</p>
+{% endif %}
+{% endblock %}

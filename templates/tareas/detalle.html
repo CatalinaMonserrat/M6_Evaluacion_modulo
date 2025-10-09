@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Detalle de tarea{% endblock %}
+{% block content %}
+<h1 class="h4 mb-3">{{ tarea.titulo }}</h1>
+<p>{{ tarea.descripcion|default:"(Sin descripción)" }}</p>
+<a class="btn btn-secondary" href="{% url 'tareas_lista' %}">Volver</a>
+<form method="post" action="{% url 'tareas_eliminar' tarea.id %}" class="d-inline ms-2">
+    {% csrf_token %}
+    <button class="btn btn-outline-danger">Eliminar</button>
+</form>
+{% endblock %}
