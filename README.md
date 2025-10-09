@@ -78,6 +78,16 @@ gestor_tareas/
 ```
 ## Capturas de pantalla
 
+![Página de inicio del proyecto](img/Pagina_principal.png)
+
+![Formulario de Registro](img/formulario_registro.png)
+
+![Login](img/login.png)
+
+![Agregar Tarea](img/agregar_tarea.png)
+
+![Eliminar Tarea](img/eliminar_tarea.png)
+
 
 ## Rutas principales
 URL	Nombre	Descripción
