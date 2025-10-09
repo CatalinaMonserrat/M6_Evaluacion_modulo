@@ -1,18 +1,95 @@
-/* Tipografía y espacios */
-body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
-.container-narrow { max-width: 820px; }
-.card-elevated { border: none; box-shadow: 0 10px 25px rgba(0,0,0,.06); border-radius: 18px; }
-.btn-soft { border-radius: 12px; }
+/* Tipografía y legibilidad */
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: #212529;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
-/* Lista vacía */
-.empty-state { padding: 48px 24px; text-align: center; border: 2px dashed #e3e3e3; border-radius: 16px; }
-.empty-state h3 { font-weight: 700; }
+/* Titulares */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: #1a1a1a;
+}
 
-/* Navbar */
-.navbar-brand { font-weight: 700; letter-spacing:.3px; }
+/* Textos secundarios */
+.text-muted {
+  color: #6c757d !important;
+}
 
-/* Alertas auto-cierre */
-.alert { transition: opacity .3s ease; }
+/* Enlaces */
+a {
+  color: #198754;
+  text-decoration: none;
+}
+a:hover {
+  color: #157347;
+  text-decoration: underline;
+}
 
-/* Formulario */
-.form-card .form-control { border-radius: 10px; }
+/* Botones suaves (se integra con Bootstrap) */
+.btn-soft {
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+.btn-soft:hover {
+  transform: translateY(-2px);
+}
+
+/* Sombras sutiles en elementos visuales */
+.card,
+.alert,
+.navbar {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+/* Separación y aire */
+.container {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+/* Navbar con efecto ligero */
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  padding: 20px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Input fields */
+.form-control {
+  border-radius: 8px;
+  border-color: #ced4da;
+  transition: all 0.2s ease;
+}
+.form-control:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.2rem rgba(25,135,84,0.15);
+}
+
+/* Alertas */
+.alert {
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* Estado vacío */
+.empty-state {
+  padding: 60px 20px;
+  background: #ffffff;
+  border: 2px dashed #dee2e6;
+  color: #6c757d;
+  text-align: center;
+  border-radius: 16px;
+}

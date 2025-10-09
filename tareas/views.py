@@ -48,7 +48,6 @@ def register_view(request):
         form = RegistroForm()
 
     return render(request, 'auth/register.html', {'form': form})
-
 # ---- Tareas ----
 @login_required
 def lista_tareas(request):
